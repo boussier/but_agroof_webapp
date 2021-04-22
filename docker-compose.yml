@@ -4,9 +4,10 @@ services:
   agroofdb:
     image: postgres:latest
     expose:
-      - ${POSTGRES_PORT:-5432}
+      - ${POSTGRES_PORT}
     env_file:
       - .env
+    command: -p ${POSTGRES_PORT}
 
   agroofapi:
     build:
@@ -19,6 +20,6 @@ services:
     entrypoint: /app/scripts/entrypoint.sh
     restart: on-failure
     ports:
-      - ${API_PORT:-80}:8000
+      - ${API_PORT}:7071
     env_file:
       - .env

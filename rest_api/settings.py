@@ -100,7 +100,7 @@ DATABASES = {
         "USER": os.getenv("POSTGRES_USER"),
         "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
         "HOST": os.getenv("POSTGRES_HOST"),
-        "POST": os.getenv("POSTGRES_PORT"),
+        "PORT": os.getenv("POSTGRES_PORT"),
     }
 }
 
@@ -225,7 +225,7 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'AGROOF REST API',
     'VERSION': '1.0.0',
     'CONTACT': {'name': 'Sylvain Boussier'},
-    'SERVERS': [{'url': os.getenv("LOCAL_SERVER", "http://agroof-api.com")}],
+    'SERVERS': [{'url': os.getenv("LOCAL_SERVER", "http://localhost:5454")}],
 }
 
 
