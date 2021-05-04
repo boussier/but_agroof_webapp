@@ -13,6 +13,7 @@ urlpatterns = [
     path('agroofapi/', TemplateView.as_view(template_name="about.html")),
     path('agroofapi/admin/', admin.site.urls),
     path('agroofapi/v1/auth/', include('apiauth.urls')),
+    path('agroofapi/v1/trees/', include('trees.urls')),
     path('agroofapi/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('agroofapi/schema/swagger-ui/',SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('agroofapi/schema/redoc/',SpectacularRedocView.as_view(url_name='schema'), name='redoc'),

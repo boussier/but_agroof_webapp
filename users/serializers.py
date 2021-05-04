@@ -8,12 +8,12 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser   
         fields = '__all__'    
-        fields = ('first_name', 'last_name', 'email')
+        fields = ('first_name', 'last_name', 'email', 'is_staff')
 
 class UserDetailsSerializer(RestAuthUserDetailsSerializer):    
     class Meta:
         model = CustomUser
-        fields = ('pk', 'email', 'first_name', 'last_name', 'weight', 'age', 'height', 'photo')
+        fields = ('pk', 'email', 'first_name', 'last_name', 'weight', 'age', 'height', 'photo','is_staff')
         read_only_fields = ('email', )
 
 class LoginSerializer(RestAuthLoginSerializer):   
