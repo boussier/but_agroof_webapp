@@ -230,7 +230,7 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'CONTACT': {'name': 'Sylvain Boussier'},
     'SCHEMA_PATH_PREFIX': r'/agroofapi/v1/',
-    'SERVERS': [{'url': os.getenv("LOCAL_SERVER", "http://localhost:5454")}],
+    'SERVERS': [{'url': os.getenv("LOCAL_SERVER", "http://localhost:5454")}],    
 }
 
 

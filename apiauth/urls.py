@@ -16,5 +16,5 @@ urlpatterns = [
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('token/verify/', TokenVerifyView.as_view(), name='token_verify'),
     path('accounts/', include('rest_registration.api.urls')),
-    path('user/', UserDetailsView.as_view(), name='rest_user_details')
+  #  path('user/', UserDetailsView.as_view(), name='rest_user_details')
 ]
