@@ -24,6 +24,10 @@ class Tree(models.Model):
     salinity_max = models.IntegerField('Salinité max', null=True, blank=True)
     organic_material_min = models.IntegerField('Matière organique min', null=True,blank=True)
     organic_material_max = models.IntegerField('Matière organique max', null=True,blank=True)
+    temperature_min = models.IntegerField('Température min', null=True, blank=True)
+    temperature_max = models.IntegerField('Température max', null=True, blank=True)
+    nutrient_min = models.IntegerField('Nutriment min', null=True, blank=True)
+    nutrient_max = models.IntegerField('Nutriment max', null=True, blank=True)
     name_img = models.CharField('Nom img', max_length=250, default='', null=True,blank=True)
 
     def __str__(self):
